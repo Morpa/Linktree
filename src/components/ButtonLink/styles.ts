@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
+import media from 'styled-media-query'
 
 type WrapperProps = {
   hasIcon: boolean
@@ -7,9 +8,12 @@ type WrapperProps = {
 const wrapperModifiers = {
   withIcon: (theme: DefaultTheme) => css`
     width: 100%;
-    height: ${theme.font.sizes.xxxlarge};
     font-size: ${theme.font.sizes.xxlarge};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
+
+    ${media.lessThan('medium')`
+      height: ${theme.font.sizes.xxxlarge};
+    `}
 
     svg {
       width: 3.5rem;
@@ -33,10 +37,18 @@ export const Wrapper = styled.button<WrapperProps>`
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
     text-decoration: none;
+    width: 100%;
+    height: ${theme.font.sizes.link};
+    font-size: ${theme.font.sizes.small};
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.xxsmall};
 
     &:hover {
       background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
     }
+
+    ${media.greaterThan('medium')`
+      height: ${theme.font.sizes.xxxlarge};
+    `}
 
     ${!!hasIcon && wrapperModifiers.withIcon(theme)};
   `}

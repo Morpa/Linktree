@@ -5,7 +5,7 @@ import * as S from './styles'
 type ButtonLinkTypes = AnchorHTMLAttributes<HTMLAnchorElement>
 
 export type ButtonLinkProps = {
-  icon: React.ReactNode
+  icon?: React.ReactNode
   as: React.ElementType
 } & ButtonLinkTypes
 

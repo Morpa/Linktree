@@ -16,13 +16,24 @@ export default {
   }
 } as Meta
 
+export const withIcon: Story<ButtonLinkProps> = (args) => (
+  <ButtonLink {...args} />
+)
+
+withIcon.args = {
+  children: 'Instagran',
+  as: 'a',
+  icon: <Instagram />,
+  href: 'link'
+}
+
 export const Default: Story<ButtonLinkProps> = (args) => (
   <ButtonLink {...args} />
 )
 
 Default.args = {
-  children: 'Instagran',
+  children:
+    'How Creating Your Own Opportunities Builds Diversity and Representation in Journalism',
   as: 'a',
-  icon: <Instagram />,
   href: 'link'
 }
