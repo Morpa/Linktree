@@ -1,20 +1,20 @@
+import { Linkedin, Github, Twitter } from '@styled-icons/boxicons-logos'
+
 import ButtonLink, { ButtonLinkProps } from 'components/ButtonLink'
 import { Container } from 'components/Container'
 import Heading from 'components/Heading'
 import Main from 'components/Main'
 
-import { Linkedin, Github, Twitter } from '@styled-icons/boxicons-logos'
-
 import * as S from './styles'
 
 export type HomeTemplateProps = {
-  links: ButtonLinkProps[]
+  links?: ButtonLinkProps[]
 }
 
 const icons = {
-  Github: <Github />,
-  Linkedin: <Linkedin />,
-  Twitter: <Twitter />
+  github: <Github />,
+  linkedin: <Linkedin />,
+  twitter: <Twitter />
 }
 
 const Home = ({ links }: HomeTemplateProps) => (
@@ -23,30 +23,39 @@ const Home = ({ links }: HomeTemplateProps) => (
 
     <S.SectionLinks>
       <Heading lineLeft lineColor="secondary">
-        Meus
+        Links I find interesting
       </Heading>
 
-      {links
+      {links!
         .filter((links) => {
           return links.category === 'Social'
         })
-        .map((link, index) => (
+        .map((link) => (
           <ButtonLink
-            key={index}
+            key={link.buttonLabel}
             buttonLabel={link.buttonLabel}
             buttonLink={link.buttonLink}
-          />
+          ></ButtonLink>
         ))}
     </S.SectionLinks>
 
     <S.SectionLinks>
       <Heading lineLeft lineColor="secondary">
-        Redes
+        My social medias
       </Heading>
 
-      <ButtonLink buttonLabel="teste" buttonLink="/teste" icon={<Linkedin />} />
-
-      <ButtonLink buttonLabel="teste" buttonLink="/teste" icon={<Github />} />
+      {links!
+        .filter((links) => {
+          return links.category === 'Public'
+        })
+        .map((link) => (
+          <ButtonLink
+            key={link.buttonLabel}
+            buttonLabel={link.buttonLabel}
+            buttonLink={link.buttonLink}
+            icon={icons[link.icon]}
+          />
+        ))}
     </S.SectionLinks>
   </Container>
 )

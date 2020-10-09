@@ -2,43 +2,43 @@ export default [
   {
     category: 'Public',
     buttonLabel: 'Linkedin',
-    buttonLink: 'www.linkedin.com',
-    icon: 'Linkedin'
+    buttonLink: 'https://linkedin.com',
+    icon: 'linkedin'
   },
   {
     category: 'Public',
     buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
+    buttonLink: 'https://.github.com',
+    icon: 'github'
+  },
+  {
+    category: 'Social',
+    buttonLabel: 'Github',
+    buttonLink: 'https://.github.com',
     icon: 'Github'
   },
   {
     category: 'Social',
     buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
+    buttonLink: 'https://.github.com',
     icon: 'Github'
   },
   {
     category: 'Social',
     buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
+    buttonLink: 'https://.github.com',
     icon: 'Github'
   },
   {
     category: 'Social',
     buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
+    buttonLink: 'https://.github.com',
     icon: 'Github'
   },
   {
     category: 'Social',
     buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
-    icon: 'Github'
-  },
-  {
-    category: 'Social',
-    buttonLabel: 'Github',
-    buttonLink: 'www.github.com',
+    buttonLink: 'https://.github.com',
     icon: 'Github'
   }
 ]

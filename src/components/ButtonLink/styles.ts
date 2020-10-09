@@ -16,7 +16,7 @@ const wrapperModifiers = {
     `}
 
     svg {
-      width: 3.5rem;
+      width: 2.5rem;
 
       & + span {
         margin-left: ${theme.spacings.xxsmall};
@@ -25,7 +25,7 @@ const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.button<WrapperProps>`
+export const Wrapper = styled.a<WrapperProps>`
   ${({ theme, hasIcon }) => css`
     display: inline-flex;
     align-items: center;

@@ -13,11 +13,11 @@ export type ButtonLinkProps = {
 
 const ButtonLink = ({
   buttonLabel,
-  icon,
   buttonLink,
+  icon,
   ...props
 }: ButtonLinkProps) => (
-  <S.Wrapper as="a" href={buttonLink} hasIcon={!!icon} {...props}>
+  <S.Wrapper href={buttonLink} hasIcon={!!icon} {...props}>
     {!!icon && icon}
     <span>{buttonLabel}</span>
   </S.Wrapper>
