@@ -21,10 +21,9 @@ export const withIcon: Story<ButtonLinkProps> = (args) => (
 )
 
 withIcon.args = {
-  children: 'Instagran',
-  as: 'a',
+  buttonLabel: 'Instagran',
   icon: <Instagram />,
-  href: 'link'
+  buttonLink: 'link'
 }
 
 export const Default: Story<ButtonLinkProps> = (args) => (
@@ -32,8 +31,7 @@ export const Default: Story<ButtonLinkProps> = (args) => (
 )
 
 Default.args = {
-  children:
+  buttonLabel:
     'How Creating Your Own Opportunities Builds Diversity and Representation in Journalism',
-  as: 'a',
-  href: 'link'
+  buttonLink: 'link'
 }

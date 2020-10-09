@@ -6,7 +6,7 @@ describe('<Container />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(
       <Container>
-        <span>Won Games</span>
+        <span>Morpa</span>
       </Container>
     )
 
@@ -28,7 +28,7 @@ describe('<Container />', () => {
         class="c0"
       >
         <span>
-          Won Games
+          Morpa
         </span>
       </div>
     `)
