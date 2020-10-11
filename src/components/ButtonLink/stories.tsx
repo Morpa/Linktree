@@ -16,21 +16,17 @@ export default {
   }
 } as Meta
 
-export const withIcon: Story<ButtonLinkProps> = (args) => (
-  <ButtonLink {...args} />
-)
+export const Social: Story<ButtonLinkProps> = (args) => <ButtonLink {...args} />
 
-withIcon.args = {
+Social.args = {
   buttonLabel: 'Instagran',
   icon: <Instagram />,
   buttonLink: 'link'
 }
 
-export const Default: Story<ButtonLinkProps> = (args) => (
-  <ButtonLink {...args} />
-)
+export const Public: Story<ButtonLinkProps> = (args) => <ButtonLink {...args} />
 
-Default.args = {
+Public.args = {
   buttonLabel:
     'How Creating Your Own Opportunities Builds Diversity and Representation in Journalism',
   buttonLink: 'link'

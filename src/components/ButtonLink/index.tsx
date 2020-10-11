@@ -8,7 +8,6 @@ export type ButtonLinkProps = {
   icon?: React.ReactNode
   buttonLabel: string
   buttonLink: string
-  category?: string
 } & ButtonLinkTypes
 
 const ButtonLink = ({
