@@ -12,13 +12,6 @@ export const Wrapper = styled.main`
   `}
 `
 
-/* export const Logo = styled.img`
-  ${({ theme }) => css`
-    width: ${theme.spacings.xxxlarge};
-    margin-bottom: ${theme.spacings.xxsmall};
-  `}
-` */
-
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxxlarge};

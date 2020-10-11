@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
+import { SectionHeaderProps } from 'types/api'
 import Main from '.'
 
 export default {
@@ -10,4 +11,4 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => <Main {...args} />
+export const Default: Story<SectionHeaderProps> = (args) => <Main {...args} />

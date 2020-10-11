@@ -5,8 +5,7 @@ import Main from '.'
 
 const props = {
   title: 'Heading 1',
-  description: 'Heading 2',
-  image: 'Imagem de um círculo com uma letra M'
+  description: 'Heading 2'
 }
 
 describe('<Main />', () => {
@@ -21,10 +20,7 @@ describe('<Main />', () => {
       screen.getByRole('heading', { name: /heading 2/i })
     ).toBeInTheDocument()
 
-    /* expect(screen.getByRole('img', { name: props.image })).toHaveAttribute(
-      'src',
-      '/img/morpa.svg'
-    ) */
+    expect(screen.getByLabelText(/Morpa/i)).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })

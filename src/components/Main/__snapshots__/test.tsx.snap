@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Main /> should render main with title, description and image 1`] = `
+.c1 {
+  width: 15rem;
+  margin-bottom: 0.8rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,12 +27,12 @@ exports[`<Main /> should render main with title, description and image 1`] = `
   color: #FAFAFA;
 }
 
-.c1 {
+.c2 {
   font-size: 4.5rem;
   font-weight: 600;
 }
 
-.c2 {
+.c3 {
   font-size: 2.0rem;
   font-weight: 400;
 }
@@ -35,13 +40,78 @@ exports[`<Main /> should render main with title, description and image 1`] = `
 <main
   class="c0"
 >
-  <h1
+  <div
     class="c1"
+  >
+    <svg
+      aria-label="Morpa"
+      fill="none"
+      role="img"
+      viewBox="0 0 64 65"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs />
+      <g
+        filter="url(#filter0_d)"
+      >
+        <path
+          d="M58.1 48.5H45.6V31.3L31.7 45.2 17.8 31.3v17.2H4.9c5.6 8.9 15.5 14.9 26.8 14.9s21.2-5.9 26.8-14.9h-.4z"
+          fill="#3CD3C1"
+          fill-opacity=".88"
+        />
+        <path
+          d="M11.2 41.9V15.5L31.7 36l20.5-20.5v26.4h9.5c1.1-3.2 1.7-6.6 1.7-10.2C63.4 14.2 49.2 0 31.7 0S0 14.2 0 31.7c0 3.6.6 7 1.7 10.2h9.5z"
+          fill="#fff"
+          fill-opacity=".9"
+        />
+      </g>
+      <defs>
+        <filter
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="71.4"
+          id="filter0_d"
+          width="71.4"
+          x="-4"
+          y="0"
+        >
+          <feflood
+            flood-opacity="0"
+            result="BackgroundImageFix"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="4"
+          />
+          <fegaussianblur
+            stdDeviation="2"
+          />
+          <fecolormatrix
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feblend
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feblend
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+  <h1
+    class="c2"
   >
     Heading 1
   </h1>
   <h3
-    class="c2"
+    class="c3"
   >
     Heading 2
   </h3>

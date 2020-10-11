@@ -1,11 +1,11 @@
+import Logo from 'components/Logo'
+import { SectionHeaderProps } from 'types/api'
+
 import * as S from './styles'
 
-const Main = ({
-  title = 'Morpa',
-  description = 'Welcome to my personal linktree'
-}) => (
+const Main = ({ title, description }: SectionHeaderProps) => (
   <S.Wrapper>
-    {/* <S.Logo src="/img/morpa.svg" alt="Imagem de um círculo com uma letra M" /> */}
+    <Logo />
     <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>
   </S.Wrapper>

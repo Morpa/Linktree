@@ -1,7 +1,4 @@
 export type SectionHeaderProps = {
-  name: string
-  url: string
-  alternativeText: string
   title: string
   description: string
 }
