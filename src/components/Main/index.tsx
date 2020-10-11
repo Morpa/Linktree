@@ -5,7 +5,7 @@ const Main = ({
   description = 'Welcome to my personal linktree'
 }) => (
   <S.Wrapper>
-    <S.Logo src="/img/morpa.svg" alt="Imagem de um círculo com uma letra M" />
+    {/* <S.Logo src="/img/morpa.svg" alt="Imagem de um círculo com uma letra M" /> */}
     <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>
   </S.Wrapper>

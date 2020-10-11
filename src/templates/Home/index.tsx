@@ -1,15 +1,12 @@
 import { Linkedin, Github, Twitter } from '@styled-icons/boxicons-logos'
 
-import ButtonLink, { ButtonLinkProps } from 'components/ButtonLink'
+import ButtonLink from 'components/ButtonLink'
 import { Container } from 'components/Container'
 import Heading from 'components/Heading'
 import Main from 'components/Main'
+import { HomePageProps } from 'types/api'
 
 import * as S from './styles'
-
-export type HomeTemplateProps = {
-  links?: ButtonLinkProps[]
-}
 
 const icons = {
   github: <Github />,
@@ -17,16 +14,20 @@ const icons = {
   twitter: <Twitter />
 }
 
-const Home = ({ links }: HomeTemplateProps) => (
+const Home = ({ links }: HomePageProps) => (
   <Container>
     <Main />
 
     <S.SectionLinks>
       <Heading lineLeft lineColor="secondary">
-        Links I find interesting
+        Interesting links
       </Heading>
 
-      {links!
+      {links.map((a) => (
+        <div>{a.buttonLabel}</div>
+      ))}
+
+      {/* {links!
         .filter((links) => {
           return links.category === 'Social'
         })
@@ -35,8 +36,8 @@ const Home = ({ links }: HomeTemplateProps) => (
             key={link.buttonLabel}
             buttonLabel={link.buttonLabel}
             buttonLink={link.buttonLink}
-          ></ButtonLink>
-        ))}
+          />
+        ))} */}
     </S.SectionLinks>
 
     <S.SectionLinks>
@@ -44,7 +45,7 @@ const Home = ({ links }: HomeTemplateProps) => (
         My social medias
       </Heading>
 
-      {links!
+      {/*  {links!
         .filter((links) => {
           return links.category === 'Public'
         })
@@ -55,7 +56,7 @@ const Home = ({ links }: HomeTemplateProps) => (
             buttonLink={link.buttonLink}
             icon={icons[link.icon]}
           />
-        ))}
+        ))} */}
     </S.SectionLinks>
   </Container>
 )

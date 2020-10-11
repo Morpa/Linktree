@@ -21,10 +21,10 @@ describe('<Main />', () => {
       screen.getByRole('heading', { name: /heading 2/i })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('img', { name: props.image })).toHaveAttribute(
+    /* expect(screen.getByRole('img', { name: props.image })).toHaveAttribute(
       'src',
       '/img/morpa.svg'
-    )
+    ) */
 
     expect(container.firstChild).toMatchSnapshot()
   })

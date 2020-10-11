@@ -1,0 +1,51 @@
+import * as S from './styles'
+
+const Logo = () => (
+  <S.LogoWrapper>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 64 65"
+      role="img"
+      aria-label="Morpa"
+    >
+      <defs />
+      <g filter="url(#filter0_d)">
+        <path
+          fill="#3CD3C1"
+          fillOpacity=".88"
+          d="M58.1 48.5H45.6V31.3L31.7 45.2 17.8 31.3v17.2H4.9c5.6 8.9 15.5 14.9 26.8 14.9s21.2-5.9 26.8-14.9h-.4z"
+        />
+        <path
+          fill="#fff"
+          fillOpacity=".9"
+          d="M11.2 41.9V15.5L31.7 36l20.5-20.5v26.4h9.5c1.1-3.2 1.7-6.6 1.7-10.2C63.4 14.2 49.2 0 31.7 0S0 14.2 0 31.7c0 3.6.6 7 1.7 10.2h9.5z"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d"
+          width="71.4"
+          height="71.4"
+          x="-4"
+          y="0"
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+      </defs>
+    </svg>
+  </S.LogoWrapper>
+)
+
+export default Logo

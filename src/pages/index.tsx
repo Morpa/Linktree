@@ -1,14 +1,22 @@
-import Home, { HomeTemplateProps } from 'templates/Home'
-import linksMock from 'components/ButtonLink/mock'
+import { GetStaticProps } from 'next'
 
-export default function Index(props: HomeTemplateProps) {
-  return <Home {...props} />
+import Home from 'templates/Home'
+import client from 'graphql/client'
+import GET_LINKS from 'graphql/queries/getLinks'
+import { LinksProps } from 'types/api'
+
+export default function Index({ links }: LinksProps) {
+  return <Home {...links} />
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+  const { links } = await client.request(GET_LINKS)
+
+  console.log(links)
+
   return {
     props: {
-      links: linksMock
+      ...links
     }
   }
 }

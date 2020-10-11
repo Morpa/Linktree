@@ -23,16 +23,11 @@ exports[`<Main /> should render main with title, description and image 1`] = `
 }
 
 .c1 {
-  width: 15rem;
-  margin-bottom: 0.8rem;
-}
-
-.c2 {
   font-size: 4.5rem;
   font-weight: 600;
 }
 
-.c3 {
+.c2 {
   font-size: 2.0rem;
   font-weight: 400;
 }
@@ -40,18 +35,13 @@ exports[`<Main /> should render main with title, description and image 1`] = `
 <main
   class="c0"
 >
-  <img
-    alt="Imagem de um círculo com uma letra M"
-    class="c1"
-    src="/img/morpa.svg"
-  />
   <h1
-    class="c2"
+    class="c1"
   >
     Heading 1
   </h1>
   <h3
-    class="c3"
+    class="c2"
   >
     Heading 2
   </h3>
