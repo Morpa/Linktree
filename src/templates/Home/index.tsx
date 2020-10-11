@@ -4,59 +4,51 @@ import ButtonLink from 'components/ButtonLink'
 import { Container } from 'components/Container'
 import Heading from 'components/Heading'
 import Main from 'components/Main'
-import { HomePageProps } from 'types/api'
+import { LandingPageProps } from 'types/api'
 
 import * as S from './styles'
 
 const icons = {
-  github: <Github />,
-  linkedin: <Linkedin />,
-  twitter: <Twitter />
+  Github: <Github />,
+  Linkedin: <Linkedin />,
+  Twitter: <Twitter />
 }
 
-const Home = ({ links }: HomePageProps) => (
+const Home = ({
+  sectionHeader,
+  sectionPublic,
+  sectionSocial
+}: LandingPageProps) => (
   <Container>
-    <Main />
+    <Main {...sectionHeader} />
 
     <S.SectionLinks>
       <Heading lineLeft lineColor="secondary">
-        Interesting links
+        {sectionPublic.title}
       </Heading>
 
-      {links.map((a) => (
-        <div>{a.buttonLabel}</div>
+      {sectionPublic.publicLinks.map((link) => (
+        <ButtonLink
+          key={link.buttonLabel}
+          buttonLabel={link.buttonLabel}
+          buttonLink={link.buttonLink}
+        />
       ))}
-
-      {/* {links!
-        .filter((links) => {
-          return links.category === 'Social'
-        })
-        .map((link) => (
-          <ButtonLink
-            key={link.buttonLabel}
-            buttonLabel={link.buttonLabel}
-            buttonLink={link.buttonLink}
-          />
-        ))} */}
     </S.SectionLinks>
 
     <S.SectionLinks>
       <Heading lineLeft lineColor="secondary">
-        My social medias
+        {sectionSocial.title}
       </Heading>
 
-      {/*  {links!
-        .filter((links) => {
-          return links.category === 'Public'
-        })
-        .map((link) => (
-          <ButtonLink
-            key={link.buttonLabel}
-            buttonLabel={link.buttonLabel}
-            buttonLink={link.buttonLink}
-            icon={icons[link.icon]}
-          />
-        ))} */}
+      {sectionSocial.socialLinks.map((link) => (
+        <ButtonLink
+          key={link.buttonLabel}
+          buttonLabel={link.buttonLabel}
+          buttonLink={link.buttonLink}
+          icon={icons[link.icon]}
+        />
+      ))}
     </S.SectionLinks>
   </Container>
 )

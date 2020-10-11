@@ -27,5 +27,5 @@ export type SectionSocialProps = {
 export type LandingPageProps = {
   sectionHeader: SectionHeaderProps
   sectionPublic: SectionPublicProps
-  sectionSocialProps: SectionSocialProps
+  sectionSocial: SectionSocialProps
 }
