@@ -10,6 +10,8 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>Morpa</title>
+        <meta name="theme-color" content="#06092B" />
+        <link rel="shortcut icon" href="/img/favicon.ico" />
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />

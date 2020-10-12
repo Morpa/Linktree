@@ -20,7 +20,6 @@ const GET_LINKS = /* GraphQL */ `
     sectionSocial {
       title
       socialLinks {
-        icon
         buttonLabel
         buttonLink
       }

@@ -14,7 +14,6 @@ export type SectionPublicProps = {
 }
 
 export type SocialLink = {
-  icon: string
   buttonLabel: string
   buttonLink: string
 }

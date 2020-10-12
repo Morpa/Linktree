@@ -8,13 +8,13 @@ const Sections = styled.section`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper},
     ${ButtonLinkStyles.Wrapper},
-    margin-bottom: calc(${theme.spacings.large} * 2);
+    margin-bottom: calc(${theme.spacings.xsmall} * 2);
   `}
 `
 
 export const SectionLinks = styled(Sections)`
   ${({ theme }) => css`
-    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    margin-bottom: calc(${theme.spacings.xsmall} * 2);
 
     ${ButtonLinkStyles.Wrapper} {
       margin-bottom: 1rem;
@@ -29,7 +29,7 @@ export const SectionLinks = styled(Sections)`
     `}
 
     ${media.greaterThan('large')`
-      margin-top: -13rem;
+      margin-top: -18rem;
     `}
 
     ${media.greaterThan('medium')`

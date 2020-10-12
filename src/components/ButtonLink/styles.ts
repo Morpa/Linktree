@@ -1,32 +1,8 @@
-import styled, { css, DefaultTheme } from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-type WrapperProps = {
-  hasIcon: boolean
-}
-
-const wrapperModifiers = {
-  withIcon: (theme: DefaultTheme) => css`
-    width: 100%;
-    font-size: ${theme.font.sizes.xxlarge};
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
-
-    ${media.lessThan('medium')`
-      height: ${theme.font.sizes.xxxlarge};
-    `}
-
-    svg {
-      width: 2.5rem;
-
-      & + span {
-        margin-left: ${theme.spacings.xxsmall};
-      }
-    }
-  `
-}
-
-export const Wrapper = styled.a<WrapperProps>`
-  ${({ theme, hasIcon }) => css`
+export const Wrapper = styled.a`
+  ${({ theme }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +25,5 @@ export const Wrapper = styled.a<WrapperProps>`
     ${media.greaterThan('medium')`
       height: ${theme.font.sizes.xxxlarge};
     `}
-
-    ${!!hasIcon && wrapperModifiers.withIcon(theme)};
   `}
 `
