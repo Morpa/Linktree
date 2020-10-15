@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from 'styles/global'
@@ -17,6 +18,24 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="description" content="My personal linktree!" />
       </Head>
+      <NextSeo
+        title="Morpa Linktree"
+        description="My personal linktree!"
+        canonical="https://morpa-linktree.netlify.app/"
+        openGraph={{
+          url: 'https://morpa-linktree.netlify.app/',
+          title: 'Morpa Linktree',
+          description: 'My personal linktree!',
+          images: [
+            {
+              url:
+                'https://res.cloudinary.com/morpa/image/upload/v1602782383/MyFiles/icon-192_qnnai1.png'
+            }
+          ],
+          site_name: 'Morpa',
+          locale: 'pt_BR'
+        }}
+      />
       <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>
