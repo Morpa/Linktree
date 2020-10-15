@@ -29,7 +29,7 @@ export const SectionLinks = styled(Sections)`
     `}
 
     ${media.greaterThan('large')`
-      margin-top: -18rem;
+      margin-top: -10rem;
     `}
 
     ${media.greaterThan('medium')`
