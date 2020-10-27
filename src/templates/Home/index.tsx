@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import ButtonLink from 'components/ButtonLink'
 import { Container } from 'components/Container'
 import Heading from 'components/Heading'
@@ -20,11 +22,16 @@ const Home = ({
       </Heading>
 
       {sectionSocial.socialLinks.map((link) => (
-        <ButtonLink
+        <motion.div
           key={link.buttonLabel}
-          buttonLabel={link.buttonLabel}
-          buttonLink={link.buttonLink}
-        />
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.5 }}
+        >
+          <ButtonLink
+            buttonLabel={link.buttonLabel}
+            buttonLink={link.buttonLink}
+          />
+        </motion.div>
       ))}
     </S.SectionLinks>
 
@@ -34,11 +41,16 @@ const Home = ({
       </Heading>
 
       {sectionPublic.publicLinks.map((link) => (
-        <ButtonLink
+        <motion.div
           key={link.buttonLabel}
-          buttonLabel={link.buttonLabel}
-          buttonLink={link.buttonLink}
-        />
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.5 }}
+        >
+          <ButtonLink
+            buttonLabel={link.buttonLabel}
+            buttonLink={link.buttonLink}
+          />
+        </motion.div>
       ))}
     </S.SectionLinks>
   </Container>
